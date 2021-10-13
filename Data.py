@@ -35,6 +35,7 @@ class CMnemonic:
 class CInstruction:
     mnemonico = ' '
     direction = ' '
+    label = ' '
 
     def setMnemonico(self,m):
         self.mnemonico = m
@@ -42,11 +43,17 @@ class CInstruction:
     def setDirection(self,d):
         self.direction = d[0:len(d)]
 
+    def setLabel(self, l):
+        self.label=l
+
     def getMnemonico(self):
         return self.mnemonico
 
     def getDirection(self):
         return self.direction
+
+    def getLabel(self):
+        return self.label
 
     def printObj(self):
         print("Hola,soy CInstruction")
